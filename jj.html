@@ -1,0 +1,123 @@
+<section id="work" class="section reveal">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Project 1 -->
+    <div class="project-card p-5">
+      <img src="assets/project1.jpg" alt="Student Management System" class="rounded-lg mb-4" />
+
+      <h3 class="text-xl font-bold mb-2">Student Management System</h3>
+
+      <div class="project-tags mb-3">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>MySQL</span>
+      </div>
+
+      <p class="text-sm leading-relaxed">
+        Designed and developed a web-based student management system to manage
+        student records, grades, and attendance. Implemented CRUD operations,
+        form validation, and database integration to improve administrative
+        efficiency.
+      </p>
+
+      <ul class="text-sm mt-3 list-disc list-inside space-y-1">
+        <li>Built responsive UI using semantic HTML5 and CSS</li>
+        <li>Integrated MySQL database for persistent data storage</li>
+        <li>Improved data accuracy and reduced manual record keeping</li>
+      </ul>
+
+      <a href="#" class="project-link">
+        View Project <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card p-5">
+      <img src="assets/project2.jpg" alt="IT Helpdesk Ticket System" class="rounded-lg mb-4" />
+
+      <h3 class="text-xl font-bold mb-2">IT Helpdesk Ticket System</h3>
+
+      <div class="project-tags mb-3">
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>SQL</span>
+        <span>Bootstrap</span>
+      </div>
+
+      <p class="text-sm leading-relaxed">
+        Developed a helpdesk ticketing system to track IT support requests,
+        prioritize incidents, and monitor resolution times. Focused on usability
+        and workflow efficiency for IT support operations.
+      </p>
+
+      <ul class="text-sm mt-3 list-disc list-inside space-y-1">
+        <li>Implemented ticket creation, status tracking, and user roles</li>
+        <li>Improved response time tracking for IT incidents</li>
+        <li>Strengthened understanding of IT service management workflows</li>
+      </ul>
+
+      <a href="#" class="project-link">
+        View Project <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card p-5">
+      <img src="assets/project3.jpg" alt="Personal Portfolio Website" class="rounded-lg mb-4" />
+
+      <h3 class="text-xl font-bold mb-2">Personal Portfolio Website</h3>
+
+      <div class="project-tags mb-3">
+        <span>HTML5</span>
+        <span>Tailwind CSS</span>
+        <span>JavaScript</span>
+        <span>SEO</span>
+      </div>
+
+      <p class="text-sm leading-relaxed">
+        Built a modern, responsive single-page portfolio to showcase projects,
+        technical skills, and professional profile. Optimized for performance,
+        accessibility, and recruiter visibility.
+      </p>
+
+      <ul class="text-sm mt-3 list-disc list-inside space-y-1">
+        <li>Implemented dark mode and responsive layout</li>
+        <li>Optimized for ATS keywords and SEO best practices</li>
+        <li>Improved Lighthouse performance and accessibility scores</li>
+      </ul>
+
+      <a href="#" class="project-link">
+        View Project <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+<script>
+  // Smooth scroll for anchor links
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (!targetElement) return;
+
+      const targetPosition = targetElement.offsetTop;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+
+      // Update URL hash after scrolling
+      setTimeout(() => {
+        history.pushState(null, null, `#${targetId}`);   
+        }, 1000);
+        setTimeout(() => {
+          history.replaceState(null, null, " ");
+        }, 1500);
+    });
+  });
