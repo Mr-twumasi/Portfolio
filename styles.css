@@ -318,3 +318,17 @@ footer {
   transition: all 0.2s ease;
   z-index: 1000;
 }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-in {
+  animation: slideIn is ease-out forwards;
+}
