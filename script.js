@@ -42,7 +42,7 @@ const roles = [
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const typingEl = document.getElementById("typing-text");
+const typingEl = document.getElementById("typing");
 
 function typeEffect() {
   if (!typingEl) return;
@@ -102,7 +102,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 /* ================= CONTACT FORM LOADING ================= */
-const contactForm = document.getElementById("contact-form");
+const contactForm = document.getElementById("contactForm");
 const sendBtn = document.getElementById("send-btn");
 
 if (contactForm && sendBtn) {
