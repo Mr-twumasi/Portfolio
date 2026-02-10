@@ -114,6 +114,7 @@ if (contactForm && sendBtn) {
     setTimeout(() => {
       sendBtn.textContent = "Message Sent ✅";
       contactForm.reset();
+     
       setTimeout(() => {
         sendBtn.textContent = "Send Message";
         sendBtn.disabled = false;
