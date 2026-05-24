@@ -104,15 +104,18 @@ updateClock();
 /* ================= CONTACT FORM LOADING ================= */
 const contactForm = document.getElementById("contactForm");
 const sendBtn = document.getElementById("send-btn");
+const loadingIcon = document.getElementById("loadingIcon");
 
 if (contactForm && sendBtn) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     sendBtn.disabled = true;
     sendBtn.textContent = "Sending...";
+    if (loadingIcon) loadingIcon.classList.remove("hidden");
 
     setTimeout(() => {
       sendBtn.textContent = "Message Sent ✅";
+      if (loadingIcon) loadingIcon.classList.add("hidden");
       contactForm.reset();
      
       setTimeout(() => {
@@ -130,5 +133,6 @@ const mobileMenu = document.getElementById("mobile-menu");
 if (mobileBtn && mobileMenu) {
   mobileBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+    mobileBtn.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("hidden")));
   });
 }
